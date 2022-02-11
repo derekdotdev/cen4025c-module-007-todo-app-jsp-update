@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>module-007-todo-app-jsp</display-name>
+
+	<servlet>
+		<description></description>
+		<display-name>TodoItemServlet</display-name>
+		<servlet-name>TodoItemServlet</servlet-name>
+		<servlet-class>net.todoapp.web.TodoItemServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>TodoItemServlet</servlet-name>
+		<url-pattern>/TodoItemServlet</url-pattern>
+	</servlet-mapping>
+	
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file></welcome-file>
+		<welcome-file>todo-form.jsp</welcome-file>
+	</welcome-file-list>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/Error.jsp</location>
+	</error-page>
+  
+</web-app>		
+
